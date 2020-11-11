@@ -12,7 +12,10 @@ class Quote extends Component{
     }
     componentDidMount() {
         axios.get("https://api.github.com/zen").then(res => {
-            this.setState({quote : res.data , loaded : true})
+            this.setState({
+                quote: res.data,
+                loaded: true
+            })
         })
     }
     render() {
